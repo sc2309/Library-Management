@@ -2,15 +2,17 @@ import datetime
 import pandas as pd
 
 
-def login(name,og_password):
+def login(name, og_password):
     csv_file = 'data.csv'
     df = pd.read_csv(csv_file)
     result = df[df['name'] == name]
 
     if not result.empty:
-        password2 = result['password'].values[3]
+        password2 = result['password'].values[0]  # Corrected index to 0
         if password2 == og_password:
-            pass                                              #   next steps atart from new file
+            print('Login successful')  # Corrected spelling              next step from next file
+        else:
+            print('Login failed')                                              
     else:
         print(f"No record found for {name}.")
 
