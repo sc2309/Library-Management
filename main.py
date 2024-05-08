@@ -8,9 +8,9 @@ def login(name, og_password):
     result = df[df['name'] == name]
 
     if not result.empty:
-        password2 = result['password'].values[0]  # Corrected index to 0
+        password2 = result['password'].values[0]
         if password2 == og_password:
-            print('Login successful')  # Corrected spelling              next step from next file
+            print('Login successful')  # next step from next file
         else:
             print('Login failed')                                              
     else:
