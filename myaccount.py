@@ -2,11 +2,11 @@ import pandas as pd
 from gmail import send_gmail
 
 def find_book(bname,name,password,phone):
-    csv_file = 'book.csv'
+    csv_file = 'books.csv'
     df = pd.read_csv(csv_file)
-    result = df[df['book'] == bname]
+    result = df[df['books'] == bname]
     if not result.empty:
-        book_is = result['book'].values[0]
+        book_is = result['books'].values[0]
         price = result['price'].values[0]
         return book_is,price
     else:

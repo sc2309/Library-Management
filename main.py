@@ -1,5 +1,6 @@
 import datetime
 import pandas as pd
+from myaccount import *
 
 
 def login(name, og_password):
@@ -27,7 +28,9 @@ if __name__ == '__main__':
         print(f'If you want to {opr} please enter the following details\n')
         name = input('Please enter your name: ').lower()
         password = input('Please enter your password: ')
+        phone = input('Please enter your phone no. : ')
         login(name,password)
+        proceed(name,password,phone)
     elif opr == 'sign in':
         print(f'If you want to {opr} please enter the following details\n')
         name = input('Please enter yoour name: ').lower()
