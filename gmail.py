@@ -1,13 +1,12 @@
 import pywhatkit
 
 
-def send_gmail(bname,name,phone):
-    # Send message
-    phone_number = "+919479396605"  # Replace with recipient's phone number
-    message = f'book {bname} was ordered by {name}, phone no.{phone}, operation : issue'
+def send_msg(message):
+    # Send message through WhatsApp
+    phone_number = "+917489118248"  # Replace with librarian's phone number
 
     try:
-        pywhatkit.sendwhatmsg(phone_number, message, 0, 0)  # Send immediately
+        pywhatkit.sendwhatmsg(phone_number, message, 0, 0)
         print("Message sent successfully!")
     except Exception as e:
         print(f"Failed to send message: {str(e)}")
