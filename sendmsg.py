@@ -3,7 +3,7 @@ import pywhatkit
 
 def send_msg(message):
     # Send message through WhatsApp
-    phone_number = "+917489118248"  # Replace with librarian's phone number
+    phone_number = "+919479396605"  # Replace with librarian's phone number
 
     try:
         pywhatkit.sendwhatmsg(phone_number, message, 0, 0)
